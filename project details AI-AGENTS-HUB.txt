@@ -216,34 +216,3 @@ Lend, borrow and save products
 Offer my own stablecoin is the default currency which can be used and receive rewards as an incentive. Fees split between the lenders, owners and entities (bots, MEV, AI…).
 Create a dex for agents
 
-(remember both frontend and backend should rely on a single file .env in the root directory, and no other .env file should be present anywhere inside the project. use python fastapi in backend, integrate phantom wallet also a button to get 2 sol at a time for devnet from faucet )
-
-now we need to implement features/functionalities one by one from this description , when a feature is implemented it should be implemented both in frontend and backend and the feature should be displayed and working on the browser. first implement wallet and airdrop functionality, and give me a comprehensive list of all the features to be implemented in this project and then we can implement the features priority wise so remember to provide me the list priority wise                            integrate local mongodb database                      REMEMBER DONT USE VITE USE REACT AND NEXTJS add requirements.txt file such that the dependencies do not conflict with each other    frontend should run on 'http://localhost:3000' and backend should run on 'http://localhost:8000'. use java script dont use typescript.
-frontend should run by command 'npm run dev' and backend should run by command 'python main.py'
-
-GIVE OPTION TO TEST EACH FEATURE IMEDIATELY AFTER ITS IMPLEMENTATION
-
-PROVIDE MORDERN UI LOOK USE ONLY LIGHT THEME AND NOT DARK THEME add a welcome screen when wallet is not connected
-
-make this a fully functional AI agent system, you should implement:
-Actual AI model training logic
-Decision-making algorithms
-Strategy execution logic
-Real-time market analysis
-Risk management algorithms
-Performance optimization logic
-
-
-i want to implement main net functionality for solana mainnet  along side solana devnet(main objective of this project) so that i can switch between them.
-
-use main.py only as entry point for the project with only minimal code , for rest of the codes of backend create separate files and folders based on the project requirements.                                                                                                                                                        you need to use all the details present in this prompt
-dont create simulation anywhere in the entire project only use real blockchain, everything should be real
-first check if all the files are integrated properly and you should have complete picture of the entire project, so that i can start building the project with your assistance as you will be knowing each and every files and codes and how they are inter related and inter connected
-after implementing a feature/functionality ask me to test it throughly 
-
-
-use only this for .env file - 
-SOLANA_NETWORK=devnet
-BACKEND_URL=http://localhost:8000
-MONGODB_URI=mongodb://localhost:27017/ai_agents_hub
-

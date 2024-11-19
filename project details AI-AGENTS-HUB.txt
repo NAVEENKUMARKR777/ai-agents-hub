@@ -1,0 +1,249 @@
+this is project description :
+
+
+Building a dashboard on top of LangChain framework that enables users to create AI agents for launching Solana tokens, and sending/receiving payments via designated wallets
+
+Building a dashboard on top of LangChain framework that enables users to create AI agents for launching Solana tokens and managing payments is an ambitious and innovative project. This would involve a combination of blockchain integration (specifically with Solana), AI agents for automation, and a user-friendly interface for interaction. Here’s a high-level overview of how you could approach this:
+
+Key Components
+
+1. LangChainFramework for AI Agents:
+
+LangChain provides a flexible framework for building AI agents that can reason, perform tasks, and integrate with APIs. You could use LangChain to enable users to create customizable agents with different capabilities, such as managing Solana wallets, launching tokens, and handling payments.
+
+The AI agents could be configured to perform tasks like interacting with Solana blockchain smart contracts, making token-related decisions, or automating financial processes such as payments or wallet transfers.
+
+
+
+2. Blockchain Integration (Solana):
+
+You'll need to integrate with Solana's blockchain, using the Solana Web3.js library (or any other Solana-specific SDK) to handle the token creation, transactions, and wallet operations.
+
+Functions needed:
+
+Creating and deploying tokens on Solana (via SPL token standard).
+
+Sending and receiving payments between Solana wallets.
+
+Monitoring token price or tracking wallet balances, potentially using oracles (like Pyth or Chainlink).
+
+
+
+
+3. Frontend Dashboard:
+
+A web interface where users can create, configure, and interact with AI agents.
+
+The dashboard will offer functionalities for users to:
+
+Create AI Agents: Configure an agent's capabilities (token launching, payment management).
+
+Track Token Launches: View token launch status, contract details, transaction history.
+
+Wallet Interaction: Visualize and interact with wallets (send/receive funds, check balances).
+
+Customize Automation: Set triggers and actions for the agents (e.g., automatically sending payments on certain conditions, monitoring token performance).
+
+
+
+
+4. Backend:
+
+A backend service to orchestrate interactions between the AI agents, Solana blockchain, and user interface. You could use Node.js/Express (for simplicity and compatibility with Web3.js) or other frameworks like FastAPI if using Python-based services.
+
+This backend would handle:
+
+AI agent lifecycle: Creation, configuration, and task delegation.
+
+Blockchain interactions: Deploying smart contracts, signing and broadcasting transactions, fetching on-chain data.
+
+Agent communication: Using LangChain (or equivalent) to direct agents' decision-making processes and actions.
+
+
+
+
+5. Security & Key Management:
+
+Since users will be dealing with funds and tokens, security is paramount. You need a secure way to manage private keys. Consider:
+
+Hardware wallets or integration with Phantom (a popular Solana wallet) for signing transactions.
+
+Non-custodial wallet approach, where the platform doesn’t hold user keys but instead facilitates secure interactions between users’ wallets and the Solana blockchain.
+
+
+
+
+
+
+---
+
+Step-by-Step Breakdown:
+
+1. Set Up Solana Blockchain Integration
+
+Use Solana Web3.js to interact with the Solana network.
+
+Implement functions that:
+
+Create SPL (Solana Program Library) tokens.
+
+Query and interact with Solana wallets (get balances, transaction history).
+
+Handle token transfers between wallets.
+
+
+
+2. Building AI Agents with LangChain
+
+Create customizable AI agents that can be configured via the dashboard.
+
+The agents should have pre-defined capabilities, such as:
+
+Launching new tokens: Agents can initiate and monitor smart contract deployments on Solana.
+
+Handling transactions: Automate the process of sending or receiving payments based on user-defined triggers.
+
+Communicating with external APIs: For fetching data like token prices or using oracles.
+
+
+
+3. Create Frontend Dashboard
+
+Build a web-based dashboard using React.js or Next.js for performance and scalability.
+
+The interface should be intuitive, allowing users to:
+
+Configure agents, including setting parameters for token launches (total supply, decimals, etc.).
+
+Manage Solana wallets (view balances, send/receive tokens).
+
+Monitor agent activities, token performance, and transaction histories.
+
+
+
+4. Backend Services
+
+Develop backend services using Node.js (for Web3.js integration) or Python (if using LangChain).
+
+The backend will:
+
+Coordinate tasks between the frontend, blockchain, and AI agents.
+
+Implement wallet management, transactions, and token launch processes.
+
+Log all activities for auditability.
+
+
+
+5. Security Considerations
+
+Ensure secure key management, potentially using:
+
+Non-custodial wallets or integrating with hardware wallets like Ledger.
+
+Securely store API keys, encryption keys, and other sensitive data using services like AWS KMS or Azure Key Vault.
+
+
+
+
+---
+
+Example Flow:
+
+1. Agent Creation:
+
+A user logs in to the dashboard and creates a new agent.
+
+The agent is configured with rules, such as automatically launching a new SPL token when conditions are met (e.g., a certain amount of Solana is deposited in a designated wallet).
+
+
+
+2. Token Launch:
+
+The agent uses the Solana SDK to deploy a new token smart contract on the Solana blockchain.
+
+The user is notified once the token has been successfully deployed, and they can track its performance from the dashboard.
+
+
+
+3. Payments and Transfers:
+
+The user sets up a payment schedule through the agent, which sends regular payments to designated wallets or splits incoming payments according to predefined rules.
+
+The AI agent monitors balances and ensures transactions are performed securely, triggering actions when certain conditions are met.
+
+
+
+
+
+---
+
+Tech Stack Overview:
+
+Frontend: React.js, Next.js, TailwindCSS (for a clean and modern UI).
+
+Backend: Node.js/Express or Python/FastAPI, LangChain (for AI agents), Solana Web3.js SDK.
+
+Blockchain: Solana (SPL token standard, wallets, payments).
+
+AI Agent Framework: LangChain or alternatives like GPT-4 API integration for intelligent decision-making.
+
+Security: Non-custodial wallet approach, secure private key management using Phantom or Ledger, SSL/TLS, two-factor authentication for users.
+
+
+Challenges and Considerations:
+
+Transaction Fees and Latency: Solana is known for low fees and high speed, but you'll need to ensure that the backend is optimized for real-time transaction handling.
+
+AI Decision Accuracy: Ensure that AI agents operate securely and don’t mismanage funds or tokens by thoroughly testing different configurations.
+
+Smart Contract Audits: If users are launching tokens, contracts should be thoroughly audited for security vulnerabilities.
+
+
+This approach would enable a highly customizable platform where users can deploy tokens, automate payments, and leverage AI agents, all while benefiting from the scalability of Solana's blockchain.
+
+
+Stablecoin for AI payments and creation of AI agents
+
+
+Creation of AI Agents which can spin up and deploy a token contract
+Creation of AI Agents (provide sdk/APIs..)
+Offer your services
+Option to send, receive, buy, sell coins and purchase products/services (also promote your services)
+Primarily multichain
+Deposit a stablecoin and the AI will scan through the highest performing yield and execute transactions
+Lend, borrow and save products
+Offer my own stablecoin is the default currency which can be used and receive rewards as an incentive. Fees split between the lenders, owners and entities (bots, MEV, AI…).
+Create a dex for agents
+
+(remember both frontend and backend should rely on a single file .env in the root directory, and no other .env file should be present anywhere inside the project. use python fastapi in backend, integrate phantom wallet also a button to get 2 sol at a time for devnet from faucet )
+
+now we need to implement features/functionalities one by one from this description , when a feature is implemented it should be implemented both in frontend and backend and the feature should be displayed and working on the browser. first implement wallet and airdrop functionality, and give me a comprehensive list of all the features to be implemented in this project and then we can implement the features priority wise so remember to provide me the list priority wise                            integrate local mongodb database                      REMEMBER DONT USE VITE USE REACT AND NEXTJS add requirements.txt file such that the dependencies do not conflict with each other    frontend should run on 'http://localhost:3000' and backend should run on 'http://localhost:8000'. use java script dont use typescript.
+frontend should run by command 'npm run dev' and backend should run by command 'python main.py'
+
+GIVE OPTION TO TEST EACH FEATURE IMEDIATELY AFTER ITS IMPLEMENTATION
+
+PROVIDE MORDERN UI LOOK USE ONLY LIGHT THEME AND NOT DARK THEME add a welcome screen when wallet is not connected
+
+make this a fully functional AI agent system, you should implement:
+Actual AI model training logic
+Decision-making algorithms
+Strategy execution logic
+Real-time market analysis
+Risk management algorithms
+Performance optimization logic
+
+
+i want to implement main net functionality for solana mainnet  along side solana devnet(main objective of this project) so that i can switch between them.
+
+use main.py only as entry point for the project with only minimal code , for rest of the codes of backend create separate files and folders based on the project requirements.                                                                                                                                                        you need to use all the details present in this prompt
+dont create simulation anywhere in the entire project only use real blockchain, everything should be real
+first check if all the files are integrated properly and you should have complete picture of the entire project, so that i can start building the project with your assistance as you will be knowing each and every files and codes and how they are inter related and inter connected
+after implementing a feature/functionality ask me to test it throughly 
+
+
+use only this for .env file - 
+SOLANA_NETWORK=devnet
+BACKEND_URL=http://localhost:8000
+MONGODB_URI=mongodb://localhost:27017/ai_agents_hub
+
